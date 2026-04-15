@@ -1,0 +1,21 @@
+doctype html
+html
+  head
+    title= title
+    link(rel="stylesheet", href="/css/style.css")
+  body
+    h1 Cars
+    a(href="/update-cobj") Add to this table
+
+    table
+      thead
+        tr
+          th Car Name
+          th Car Model
+          th Car Registration Number
+      tbody
+        each record in records
+          tr
+            td= record.properties.car_name || ''
+            td= record.properties.car_model || ''
+            td= record.properties.car_registration_number || ''

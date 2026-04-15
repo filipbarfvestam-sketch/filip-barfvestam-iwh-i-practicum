@@ -1,0 +1,23 @@
+doctype html
+html
+  head
+    title= title
+    link(rel="stylesheet", href="/css/style.css")
+  body
+    h1 Add Car
+    a(href="/") Return to the homepage
+
+    form(method="POST", action="/update-cobj")
+      div
+        label(for="car_name") Car Name
+        input(type="text", name="car_name", id="car_name", required)
+
+      div
+        label(for="car_model") Car Model
+        input(type="text", name="car_model", id="car_model", required)
+
+      div
+        label(for="car_registration_number") Car Registration Number
+        input(type="text", name="car_registration_number", id="car_registration_number", required)
+
+      button(type="submit") Submit
